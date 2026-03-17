@@ -12,3 +12,5 @@ export * from "./NavBar";
 export * from "./HOC";
 export * from "./HOCNew";
 export * from "./useGetTodos";
+export * from "./Example";
+export * from "./ToDo";
