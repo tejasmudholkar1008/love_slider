@@ -14,3 +14,4 @@ export * from "./HOCNew";
 export * from "./useGetTodos";
 export * from "./Example";
 export * from "./ToDo";
+export * from "./DotNetApi";

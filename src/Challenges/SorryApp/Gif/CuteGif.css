@@ -1,0 +1,12 @@
+.gif-wrapper {
+  width: 260px;
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.cute-gif {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 28px;
+}

@@ -1,0 +1,266 @@
+/* LoveLetterScreen.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* FULL SCREEN */
+.love-screen {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.3), transparent 30%),
+    linear-gradient(135deg, #ffe7f1 0%, #ffd6e9 40%, #ffc7df 100%);
+}
+
+/* CENTER PINK GLOW */
+.pink-glow {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+
+  background: rgba(255, 105, 180, 0.2);
+
+  filter: blur(120px);
+
+  animation: glowMove 6s ease-in-out infinite alternate;
+}
+
+@keyframes glowMove {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.15);
+  }
+}
+
+/* CONTENT */
+.center-content {
+  z-index: 10;
+  text-align: center;
+}
+
+/* ENVELOPE */
+.envelope-wrapper {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.envelope {
+  width: 240px;
+  height: 160px;
+  position: relative;
+
+  filter: drop-shadow(0 18px 30px rgba(255, 105, 180, 0.18));
+}
+
+/* BODY */
+.envelope-body {
+  width: 100%;
+  height: 100%;
+  background: #fffdf9;
+
+  border: 5px solid #d8a24b;
+  border-radius: 0 0 20px 20px;
+
+  position: absolute;
+  bottom: 0;
+}
+
+/* FLAP */
+.envelope-top {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 115px;
+
+  background: #ffc7da;
+
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+
+  border: 5px solid #d8a24b;
+
+  z-index: 2;
+}
+
+/* TEXT */
+.open-text {
+  margin-top: 45px;
+
+  color: #ea7aa3;
+
+  font-size: 56px;
+  font-family: cursive;
+  font-weight: bold;
+  letter-spacing: 3px;
+
+  text-shadow: 0 0 12px rgba(255, 105, 180, 0.25);
+}
+
+/* FLOATING HEARTS */
+.floating-hearts {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.floating-hearts span {
+  position: absolute;
+  bottom: -100px;
+
+  color: rgba(255, 105, 180, 0.4);
+
+  animation: floatHeart linear infinite;
+}
+
+/* RANDOM HEARTS */
+.floating-hearts span:nth-child(1) {
+  left: 5%;
+  font-size: 20px;
+  animation-duration: 10s;
+}
+
+.floating-hearts span:nth-child(2) {
+  left: 12%;
+  font-size: 30px;
+  animation-duration: 14s;
+}
+
+.floating-hearts span:nth-child(3) {
+  left: 20%;
+  font-size: 18px;
+  animation-duration: 9s;
+}
+
+.floating-hearts span:nth-child(4) {
+  left: 28%;
+  font-size: 26px;
+  animation-duration: 13s;
+}
+
+.floating-hearts span:nth-child(5) {
+  left: 36%;
+  font-size: 22px;
+  animation-duration: 11s;
+}
+
+.floating-hearts span:nth-child(6) {
+  left: 45%;
+  font-size: 35px;
+  animation-duration: 15s;
+}
+
+.floating-hearts span:nth-child(7) {
+  left: 54%;
+  font-size: 20px;
+  animation-duration: 10s;
+}
+
+.floating-hearts span:nth-child(8) {
+  left: 62%;
+  font-size: 28px;
+  animation-duration: 12s;
+}
+
+.floating-hearts span:nth-child(9) {
+  left: 70%;
+  font-size: 18px;
+  animation-duration: 9s;
+}
+
+.floating-hearts span:nth-child(10) {
+  left: 78%;
+  font-size: 24px;
+  animation-duration: 14s;
+}
+
+.floating-hearts span:nth-child(11) {
+  left: 86%;
+  font-size: 20px;
+  animation-duration: 11s;
+}
+
+.floating-hearts span:nth-child(12) {
+  left: 94%;
+  font-size: 30px;
+  animation-duration: 15s;
+}
+
+/* HEART FLOAT ANIMATION */
+@keyframes floatHeart {
+  0% {
+    transform: translateY(0) scale(0.7);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-120vh) scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .open-text {
+    font-size: 42px;
+  }
+
+  .envelope {
+    width: 210px;
+    height: 145px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .open-text {
+    font-size: 28px;
+    margin-top: 35px;
+  }
+
+  .envelope {
+    width: 170px;
+    height: 115px;
+  }
+
+  .envelope-top {
+    height: 85px;
+  }
+
+  .pink-glow {
+    width: 350px;
+    height: 350px;
+  }
+
+  .floating-hearts span {
+    opacity: 0.8;
+  }
+}
